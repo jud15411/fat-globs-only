@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fat Globs Only - The Drop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+    <style>
+        /* This rule specifically targets the image on this page */
+        .page-content .content-img {
+            max-width: 550px; /* Sets a maximum width for the image */
+            display: block;       /* NEW: This ensures the centering works correctly */
+            margin-left: auto;   /* These two lines keep the image centered */
+            margin-right: auto;
+        }
+
+        /* Added styles for the new email signup box */
+        .email-signup-box {
+            background-color: #ffffff;
+            border: 3px solid var(--dark-text);
+            box-shadow: 8px 8px 0px var(--primary-orange);
+            padding: 2rem;
+            margin: 4rem auto;
+            text-align: center;
+            border-radius: 10px;
+            transform: rotate(-1deg); /* Slight sticker-like tilt */
+        }
+        .email-signup-box h3 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin: 0 0 0.5rem 0;
+            color: var(--primary-orange);
+        }
+        .email-signup-box p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        .signup-form {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        @media (max-width: 600px) {
+            .signup-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="https://i.ibb.co/KzyLzfKR/FGO-logo.png" alt="Fat Globs Only Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Merch</a></li>
+                <li><a href="weed.html">Weed</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section page-content">
+            <div style="text-align: center;" class="animate-on-scroll">
+                <h2 class="section-title">The Paperwork is Filed. The Fuse is Lit.</h2>
+            </div>
+            <h1 class="animate-on-scroll" style="text-align: center; margin-bottom: 2rem;">THE COUNTDOWN IS ON.</h1>
+
+            <img src="https://i.ibb.co/YB4L0KJB/weed-soon.jpg" alt="A 'Coming Soon' image with a melting cannabis leaf" class="content-img animate-on-scroll">
+
+            <div class="text-content animate-on-scroll">
+                <p>Let's be real. You're tired of the same old corporate cannabis that all looks and tastes the same. We are too. That's why we started this. "Fat Globs Only" isn't just a brand; it's a statement. It’s a commitment to the kind of quality, potency, and flavor that real connoisseurs deserve.</p>
+                <p>We're navigating the final legal hurdles to bring our vision to life. The mission is simple: get the loudest flower, the purest concentrates, and the most creative edibles into your hands, delivered right to your door with the merch to match. No compromises. No corporate BS.</p>
+                
+                <blockquote class="animate-on-scroll" style="border-left: 5px solid var(--accent-teal); padding-left: 1.5rem; margin: 2rem 0; font-style: italic; font-size: 1.2rem; color: var(--accent-teal);">
+                    "We vow to never sell you anything we wouldn't be proud to smoke ourselves. Period."
+                </blockquote>
+
+                <h3>The Lineup We're Fighting For:</h3>
+                <ul>
+                    <li><b>Terpene-Rich Flower:</b> Hand-selected, boutique strains that stink up a room in the best way possible.</li>
+                    <li><b>High-Potency Dabs:</b> From glistening diamonds to buttery badder, only the cleanest and most powerful extracts will carry our name.</li>
+                    <li><b>Edibles with an Edge:</b> Unique flavors, real effects. The kind of treats that hit just right.</li>
+                    <li><b>The Ultimate Convenience:</b> Discreet, reliable delivery that pairs your gear with your green.</li>
+                </ul>
+            </div>
+
+            <div class="email-signup-box animate-on-scroll">
+                <h3>Don't Miss The Drop.</h3>
+                <p>This is your only chance to get on the early access list. Be the first to know when we're live and get exclusive access to our launch day menu.</p>
+                <div class="signup-form">
+                    <input type="email" placeholder="Enter Your Email Address" required>
+                    <button class="btn">GET ON THE LIST</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Fat Globs Only. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

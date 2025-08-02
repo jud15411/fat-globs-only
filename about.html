@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fat Globs Only - My Story</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+    <style>
+        /* Added styles for the new engaging layout */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        .story-prompt h3 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--primary-orange);
+            line-height: 1.2;
+            margin: 0;
+            text-align: right;
+            transform: rotate(-3deg);
+        }
+        .story-answer p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0;
+            padding: 1.5rem;
+            background: #fff;
+            border: 2px solid var(--dark-text);
+            border-radius: 10px;
+        }
+        .mission-statement {
+            background: var(--dark-text);
+            color: #fff;
+            text-align: center;
+            padding: 2.5rem;
+            margin: 4rem 0;
+            border-radius: 10px;
+            transform: rotate(1deg);
+        }
+        .mission-statement h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--accent-teal);
+            margin-top: 0;
+        }
+        .call-to-action {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .story-prompt h3 {
+                text-align: center;
+                margin-bottom: 1rem;
+                transform: rotate(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="https://i.ibb.co/KzyLzfKR/FGO-logo.png" alt="Fat Globs Only Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Merch</a></li>
+                <li><a href="weed.html">Weed</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section page-content">
+            <div style="text-align: center;" class="animate-on-scroll">
+                <h2 class="section-title">The Real Story</h2>
+            </div>
+            
+            <div class="story-grid animate-on-scroll">
+                <div class="story-prompt">
+                    <h3>Where did it all start?</h3>
+                </div>
+                <div class="story-answer">
+                    <p>This brand wasn’t born in an office. It started with me, in a low-income area, feeling stuck and knowing I had to build my own way out. I faced my share of struggles, but the goal was always clear: create something real, something valuable, and change my circumstances for good.</p>
+                </div>
+            </div>
+
+            <div class="story-grid animate-on-scroll">
+                <div class="story-prompt">
+                    <h3>So what IS Fat Globs Only?</h3>
+                </div>
+                <div class="story-answer">
+                    <p>It's my ladder. It's the hustle made real. Every design, every product, every step forward is fueled by that hunger to build something better. This company is what's taking me out of that hole, and it represents a new beginning.</p>
+                </div>
+            </div>
+
+            <div class="mission-statement animate-on-scroll">
+                <h3>Our Mission: Gear Up, then Green Up.</h3>
+                <p>We're starting with what we can do right now: creating killer merchandise—shirts, hoodies, hats, stickers—that represents our culture. Every purchase you make helps build this foundation.</p>
+                <p style="margin-top: 1rem;">Once we're rolling, we're launching Phase Two: adding a full lineup of premium cannabis products. The dream is to deliver your favorite merch and your favorite green all in one box, right to your door.</p>
+            </div>
+
+            <div class="call-to-action animate-on-scroll">
+                <h3>Every purchase is a piece of the story.</h3>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 1.5rem auto;">This is more than just a brand. It's my personal journey, and I want you to be a part of it. When you buy something from this site, you're not just getting cool stuff—you're casting a vote for the underdog. You're helping build this thing from the ground floor up.</p>
+                <a href="index.html" class="btn" style="padding: 1rem 3rem; font-size: 1.2rem;">Support the Journey</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Fat Globs Only. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

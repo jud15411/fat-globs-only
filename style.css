@@ -1,0 +1,239 @@
+/* --- NEW "URBAN STICKER BOMB" THEME --- */
+
+/* 1. SETUP & VARIABLES */
+:root {
+    --bg-light: #f4f4f4;
+    --primary-orange: #ff4d00;
+    --accent-teal: #007a7a;
+    --dark-text: #1a1a1a;
+    --sticker-border: #1a1a1a;
+    --font-sans: 'Poppins', sans-serif;
+    --font-display: 'Nosifier', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Nosifier&display=swap');
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--bg-light);
+    color: var(--dark-text);
+    cursor: default; /* Back to the normal cursor! */
+    overflow-x: hidden; /* Prevent horizontal scrollbars from animations */
+}
+
+/* 2. HEADER & NAVIGATION */
+.main-header {
+    padding: 1rem;
+    /* This is the reverted left-to-right orange and teal gradient */
+    background: linear-gradient(90deg,
+        #22004f 0%,  /* Darker Orange */
+        var(--primary-orange) 15%,
+        #4600a1 30%,  /* Orange Highlight */
+        var(--primary-orange) 45%,
+        var(--primary-orange) 55%,
+        #4600a1 70%,  /* Teal Highlight */
+        var(--primary-orange) 85%,
+        #22004f 100% /* Darker Teal */
+    );
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Adjust padding since it's inside the header now */
+}
+/* --- LOGO STYLE UPDATES START HERE --- */
+.logo {
+    /* Removed font styles, keeping transition */
+    transition: transform 0.3s ease;
+    display: block; /* Ensures the link takes up the image space */
+}
+.logo img {
+    /* NEW: Styles for the image itself */
+    height: 65px; /* Increased from 50px to make it bigger */
+    border-radius: 10px; /* NEW: This adds rounded corners */
+    display: block; /* Removes any extra space below the image */
+}
+/* --- LOGO STYLE UPDATES END HERE --- */
+.logo:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+.nav-links {
+    list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;
+}
+.nav-links a {
+    color: #ffffff; /* NEW: Changed to white for readability */
+    text-decoration: none; font-size: 1.1rem; font-weight: 700;
+    padding: 5px; position: relative;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* NEW: Added subtle shadow */
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ffffff; /* NEW: Hover underline is now white */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* 3. HERO SECTION */
+.hero {
+    display: flex; justify-content: center; align-items: center;
+    min-height: 50vh; padding: 4rem 2rem; text-align: center;
+}
+.hero-content h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 12vw, 6rem);
+    color: var(--dark-text);
+    line-height: 1.1;
+    margin: 0;
+}
+.hero-content p {
+    font-size: 1.5rem; color: var(--accent-teal); font-weight: 700;
+    margin-top: 1rem;
+}
+
+/* 4. "STICKER" PRODUCT CARDS */
+.content-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section-title {
+    font-family: var(--font-display);
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+/* Hand-drawn underline effect */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M0 5 C 20 0, 40 10, 60 5 S 80 0, 100 5" stroke="%23ff4d00" stroke-width="3" fill="none" stroke-linecap="round"/></svg>');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s, transform 0.5s;
+    transition-delay: 0.3s;
+}
+.section-title.in-view::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+.product-card.sticker {
+    background: #ffffff;
+    border: 3px solid var(--sticker-border);
+    border-radius: 15px 255px 15px 15px / 255px 15px 15px 15px; /* Irregular corner */
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 5px 5px 0px var(--dark-text);
+    transition: all 0.3s ease-in-out;
+}
+.product-card.sticker:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 10px 10px 0px var(--primary-orange);
+}
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--dark-text);
+}
+.product-card h3 { margin: 0.5rem 0; font-size: 1.5rem; }
+.product-card p { margin: 0 0 1.5rem 0; font-size: 1.2rem; color: var(--accent-teal); font-weight: 700; }
+
+/* 5. BUTTONS & FORMS */
+.btn {
+    padding: 1rem 2rem;
+    background: var(--primary-orange);
+    color: #ffffff;
+    border: 2px solid var(--dark-text);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 3px 3px 0 var(--dark-text);
+    transition: all 0.2s ease;
+}
+.btn:hover {
+    background: var(--accent-teal);
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0 var(--dark-text);
+}
+input, textarea {
+    padding: 1rem;
+    background: #ffffff;
+    border: 2px solid var(--dark-text);
+    color: var(--dark-text);
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Important for padding */
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+}
+
+
+/* 6. GENERIC PAGE & CONTENT STYLES */
+.page-content { text-align: left; }
+.page-content h1 { text-align: center; font-size: 3.5rem; color: var(--dark-text); }
+.content-img {
+    width: 100%; border-radius: 12px; margin: 2rem 0;
+    border: 3px solid var(--dark-text);
+}
+.text-content { line-height: 1.8; font-size: 1.1rem; }
+
+/* 7. ON-SCROLL ANIMATIONS */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+/* Custom animation for stickers */
+.animate-on-scroll.sticker {
+    transform: translateY(50px) rotate(-5deg);
+}
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+}
+/* Stagger children animations */
+.product-grid.in-view .product-card:nth-child(1) { transition-delay: 0.1s; }
+.product-grid.in-view .product-card:nth-child(2) { transition-delay: 0.2s; }
+.product-grid.in-view .product-card:nth-child(3) { transition-delay: 0.3s; }
+
+
+/* 8. FOOTER */
+.main-footer {
+    text-align: center; padding: 3rem 2rem; margin-top: 4rem;
+    background-color: #ffffff;
+    border-top: 2px solid var(--dark-text);
+}
