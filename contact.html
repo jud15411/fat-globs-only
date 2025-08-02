@@ -29,7 +29,11 @@
             </div>
             <h1 class="animate-on-scroll" style="text-align: center; margin-bottom: 2rem;">Drop Us a Line</h1>
 
-            <form class="animate-on-scroll" style="max-width: 600px; margin: 3rem auto; display: flex; flex-direction: column; gap: 1rem;">
+            <form id="contact-form"
+                  class="animate-on-scroll" 
+                  style="max-width: 600px; margin: 3rem auto; display: flex; flex-direction: column; gap: 1rem;"
+                  action="https://formspree.io/f/mldlwdgr"
+                  method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
@@ -40,6 +44,14 @@
 
     <footer class="main-footer">
         <p>&copy; 2025 Fat Globs Only. All Rights Reserved.</p>
+
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Success!</h2>
+                <p>Your message has been sent. We'll get back to you shortly.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
