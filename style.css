@@ -27,14 +27,14 @@ body {
     padding: 1rem;
     /* This is the reverted left-to-right orange and teal gradient */
     background: linear-gradient(90deg,
-        #22004f 0%,  /* Darker Orange */
-        var(--primary-orange) 15%,
-        #4600a1 30%,  /* Orange Highlight */
-        var(--primary-orange) 45%,
-        var(--primary-orange) 55%,
-        #4600a1 70%,  /* Teal Highlight */
-        var(--primary-orange) 85%,
-        #22004f 100% /* Darker Teal */
+        #171717 0%,  /* Darker Orange */
+        #1a1a1a 15%,
+        #e07706 30%,  /* Orange Highlight */
+        #1a1a1a 45%,
+        #e07706 55%,
+        #1a1a1a 70%,  /* Teal Highlight */
+        #e07706 85%,
+        #1a1a1a 100% /* Darker Teal */
     );
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -46,6 +46,7 @@ body {
     margin: 0 auto;
     padding: 0 1rem; /* Adjust padding since it's inside the header now */
 }
+
 /* --- LOGO STYLE UPDATES START HERE --- */
 .logo {
     /* Removed font styles, keeping transition */
