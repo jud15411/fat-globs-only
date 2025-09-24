@@ -103,4 +103,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+    // --- Hamburger Menu ---
+    const hamburger = document.querySelector('.hamburger-menu');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+        if (mobileNav.style.display === 'flex') {
+            mobileNav.style.display = 'none';
+        } else {
+            mobileNav.style.display = 'flex';
+        }
+    });
 });
